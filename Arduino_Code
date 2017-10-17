@@ -20,29 +20,41 @@ void loop() {
   for(int i = 0; i < NUM_PIXELS; i++) {
     strip.setPixelColor(i % 12, 0xFF0000);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 1) % 12, 0xFF8000);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 2) % 12, 0xFFFF00);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 3) % 12, 0x80FF00);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 4) % 12, 0x00FF00);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 5) % 12, 0x00FF80);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 6) % 12, 0x00FFFF);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 7) % 12, 0x0080FF);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 8) % 12, 0x0000FF);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 9) % 12, 0x8000FF);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 10) % 12, 0xFF00FF);
     strip.setBrightness(18);
+    strip.show();
     strip.setPixelColor((i + 11) % 12, 0xFF0080);
     strip.setBrightness(18);
-    delay(15);
+    strip.show();
+    delay(30);
   }
   
 

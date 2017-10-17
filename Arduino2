@@ -1,0 +1,85 @@
+#include <Adafruit_NeoPixel.h>
+#ifdef _AVR_
+#include <avr.power.h>
+#endif
+
+int const NUM_PIXELS = 12;
+int const PIN = 13;
+Adafruit_NeoPixel strip;
+
+
+
+void setup() {
+ strip = Adafruit_NeoPixel(NUM_PIXELS, PIN, NEO_GRB+NEO_KHZ800);
+ strip.begin();
+ strip.show();
+
+}
+
+void loop() {
+for(int i = 0; i < 12; i++) {
+  for(int j = 0; j < 12; j++) {
+    if(i == 0) {
+      strip.setPixelColor(j, 0xFF0000);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 1) {
+      strip.setPixelColor(j, 0xFF8000);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 2) {
+      strip.setPixelColor(j, 0xFFFF00);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 3) {
+      strip.setPixelColor(j, 0x80FF00);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 4) {
+      strip.setPixelColor(j, 0x00FF00);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 5) {
+      strip.setPixelColor(j, 0x00FF80);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 6) {
+      strip.setPixelColor(j, 0x00FFFF);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 7) {
+      strip.setPixelColor(j, 0x0080FF);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 8) {
+      strip.setPixelColor(j, 0x0000FF);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 9) {
+      strip.setPixelColor(j, 0x8000FF);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 10) {
+      strip.setPixelColor(j, 0xFF00FF);
+      strip.setBrightness(18);
+      strip.show();
+    }
+    if(i == 11) {
+      strip.setPixelColor(j, 0xFF0080);
+      strip.setBrightness(18);
+      strip.show();
+    }
+  }
+  delay(100);
+}
+}

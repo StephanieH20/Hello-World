@@ -1,0 +1,95 @@
+import java.util.Scanner;
+
+import java.util.ArrayList;
+
+
+
+public class XYZ {
+
+
+private static ArrayList<Integer> nums;
+
+private static Scanner sc;
+
+
+  public static void main(String[] args) {
+
+      nums = new ArrayList<Integer>();
+
+      collectNums();
+
+     
+
+  }
+
+   
+
+  public static void collectNums() {
+
+      if(nums.size() > 0) {
+
+        System.out.println("Numbers entered: ");
+
+        for(int i = 0; i < nums.size(); i++) {
+
+            System.out.print(nums.get(i) + ", ");
+
+        }
+
+      }
+
+     
+
+      sc = new Scanner(System.in);
+
+      System.out.println("Enter number: ");
+
+      int input = Integer.parseInt(sc.nextLine());
+
+      nums.add(input);
+
+      System.out.println("Continue?");
+
+      String c = sc.nextLine();
+
+      if(c.equals("yes")) {
+
+        collectNums();
+
+      }
+
+      if(c.equals("no")) {
+
+        int min = findMin(nums);
+        for(int i = 0; i < nums.size(); i++) {
+        System.out.print(nums.get(i) + ", ");
+        }
+
+        System.out.println("Minimum: " + min);
+
+      }
+
+  }
+
+   
+
+  public static int findMin(ArrayList<Integer> in) {
+
+      int min = in.get(0);
+
+      for(int i = 0; i < in.size(); i++) {
+
+        if(in.get(i) <= min) {
+
+            min = in.get(i);
+
+        }
+
+      }
+
+      return min;
+
+  }
+
+}
+
